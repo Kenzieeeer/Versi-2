@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dari Kenzie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oi&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sigmar&display=swap" rel="stylesheet">
+
+
+
+    <style>
+        body {
+            background-color: #ffccdc;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+        h1 {
+            color: #ff4d6d;
+            font-size: 3em;
+            font-family: "Sigmar", serif;
+  
+  
+  
+
+        }
+        .heart {
+            position: absolute;
+            color: #ff4d6d;
+            font-size: 4em;
+            animation: float 3s infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(-100px); opacity: 0.5; }
+            100% { transform: translateY(-200px); opacity: 0; }
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .photo-card {
+            position: relative;
+            width: 220px;
+            height: 390px;
+            padding: 10px;
+            background: white;
+            border: 5px solid white;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .photo-card img {
+            width: 225px;
+            height: 350px;
+            border-radius: 10px;
+        }
+
+        .photo-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-card:hover {
+    transform: scale(1.2);
+}
+
+.photo-card:hover ~ .love-button {
+    margin-top: 50px !important;
+    transition: margin-top 0.3s ease-in-out;
+}
+
+        .photo-card p {
+            font-size: 14px;
+            color: #fd4040;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        .particle {
+            position: absolute;
+            font-size: 1.5em;
+            color: #ff4d6d;
+            animation: fall 2s linear infinite;
+        }
+
+        @keyframes fall {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(50px) scale(0.5); opacity: 0; }
+}
+
+
+        .love-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .love-button:hover {
+            background-color: #e63950;
+        }
+.p {
+    color: #fd6c7f;
+    font-family: "Sigmar", serif;
+}
+       
+    </style>
+</head>
+<body>
+    <h1>WELCOME WELCOMEEE ❤️</h1>
+    <p class="p">You are my everything. I made this special page just for you</p>
+    
+    <div class="gallery">
+        <div class="photo-card">
+            <img src="d5ed680d-46ec-4e95-bead-78c231d0ae66.jpg" alt="My Love">
+            <p>You're the best thing that ever happened to me ❤️"</p>
+        </div>
+        <div class="photo-card">
+            <img src="451c76ff-7524-40e9-b5e1-6973445e2266.jpg" alt="My Love">
+            <p>Every moment with you is a memory to cherish 💖"</p>
+        </div>
+        <div class="photo-card">
+            <img src="22e6c3b4-7df7-417f-a85f-6711708b5565.jpg" alt="My Love">
+            <p>Love you more than words can say 😘"</p>
+        </div>
+        <div class="photo-card">
+            <img src="7fe5a9fd-e738-4c1b-a3c5-43476d54dbae.jpg" alt="My Love">
+            <p>Forever grateful to have you in my life 💕"</p>
+        </div>
+
+    
+
+    </div>
+    
+    <a href="page2.html">
+        <button class="love-button">Click for More Love ❤️</button>
+    </a>
+    
+    
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '100vh';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 3000);
+        }
+        setInterval(createHeart, 500);
+
+
+        
+    
+
+
+    </script>
+</body>
+</html>
+
